@@ -17,4 +17,5 @@ for i in $DIR; do
   git push origin version-hotfix
   # Please install pullr by running "npm install -g pullr"
   pullr -n -t "Refactoring VERSION.txt" -d "Removing common prefix from VERSION.txt"
+  cd ..
 done 
