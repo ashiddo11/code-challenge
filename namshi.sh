@@ -2,6 +2,15 @@
 
 # Please run this script on your top level directory of all your git projects
 
+# Enter Git token and user profile
+AUTH_TOKEN=""
+PROFILE=""
+REPOS=`curl -i -H "Authorization: token "$AUTH_TOKEN"" https://api.github.com/users/$PROFILE/repos | grep ssh_url | cut -d"\"" -f4`
+
+for repo in $REPOS; do
+  git clone $repo
+done
+
 # List directories with VERSION.txt
 DIR=$(find . -name VERSION.txt | cut -d'/' -f2)
 echo $DIR
