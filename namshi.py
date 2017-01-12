@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 
+# Please install dependencies and add auth token
+
 import pygithub3
 import subprocess
 import git
@@ -9,8 +11,7 @@ gh = None
 user = "ashiddo11"
 repos_edit = []
 repo_names = []
-auth_token = "52c7d103a804ad90d5c792e82e36f021819f3e6c"
-user = "ashiddo11"
+auth_token = ""
 
 def get_repos(all_repos):
 	for repo in all_repos:
